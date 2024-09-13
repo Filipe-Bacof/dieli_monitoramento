@@ -13,6 +13,12 @@ class PersonRepository {
     return person
   }
 
+  async findByName(name) {
+    const person = await Person.findOne({ name }).lean().exec()
+
+    return person
+  }
+
   async findByIdAndUpdate(id, name) {
     const person = await Person.findOneAndUpdate(
       { _id: id },

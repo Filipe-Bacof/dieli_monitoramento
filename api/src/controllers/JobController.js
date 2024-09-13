@@ -36,7 +36,7 @@ class JobController {
 
     try {
       const isAlreadyRegistered = await JobRepository.findByTitle(title)
-      if (isAlreadyRegistered)
+      if (isAlreadyRegistered.length > 0)
         return res
           .status(422)
           .json({ message: 'Você já cadastrou esse trabalho.' })
@@ -58,7 +58,7 @@ class JobController {
 
     try {
       const isAlreadyRegistered = await JobRepository.findByTitle(title)
-      if (isAlreadyRegistered)
+      if (isAlreadyRegistered.length > 0)
         return res
           .status(422)
           .json({ message: 'Você já cadastrou outro trabalho com esse título.' })

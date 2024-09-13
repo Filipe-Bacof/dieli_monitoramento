@@ -1,0 +1,458 @@
+{
+	"info": {
+		"_postman_id": "1845b11b-cd2a-4738-a374-1ed8722b59cb",
+		"name": "Dieli Monitoramento",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25133769"
+	},
+	"item": [
+		{
+			"name": "Person",
+			"item": [
+				{
+					"name": "All Persons",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/person",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"person"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Person By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/person/66e44cd6958795e0815bb5f0",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"person",
+								"66e44cd6958795e0815bb5f0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Person",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Dieli\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/person",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"person"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Person",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Dieli\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/person/66e44cd6958795e0815bb5f0",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"person",
+								"66e44cd6958795e0815bb5f0"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Job",
+			"item": [
+				{
+					"name": "All Jobs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/job",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"job"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Job By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/job/66e44d6f92ac7c5fde4f6fd0",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"job",
+								"66e44d6f92ac7c5fde4f6fd0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Job",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Chapa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/job",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"job"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Job",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Chapa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/job/66e44d6f92ac7c5fde4f6fd0",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"job",
+								"66e44d6f92ac7c5fde4f6fd0"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Realization",
+			"item": [
+				{
+					"name": "All Realizations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/realization",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"realization"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Realization By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/realization/66e44e9bc869633a754f8540",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"realization",
+								"66e44e9bc869633a754f8540"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Realization",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"person\": \"66e44cd6958795e0815bb5f0\",\r\n    \"job\": \"66e44d6f92ac7c5fde4f6fd0\",\r\n    \"date\": \"2024-09-14T18:00:00.000Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/realization",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"realization"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Realization",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"person\": \"66e44cd6958795e0815bb5f0\",\r\n    \"job\": \"66e44d6f92ac7c5fde4f6fd0\",\r\n    \"date\": \"2024-09-13T18:00:00.000Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/realization/66e44e9bc869633a754f8540",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"realization",
+								"66e44e9bc869633a754f8540"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Realization",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/realization/66e44f6f84f33e0b24f83be9",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"realization",
+								"66e44f6f84f33e0b24f83be9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Complaint",
+			"item": [
+				{
+					"name": "All Complaints",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/complaint",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"complaint"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Complaint By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/complaint/66e44e9bc869633a754f8540",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"complaint",
+								"66e44e9bc869633a754f8540"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Complaint",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"person\": \"66e44cd6958795e0815bb5f0\",\r\n    \"job\": \"66e44d6f92ac7c5fde4f6fd0\",\r\n    \"complaint\": \"Não aguento mais essa chapa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/complaint",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"complaint"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Complaint",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"person\": \"66e44cd6958795e0815bb5f0\",\r\n    \"job\": \"66e44d6f92ac7c5fde4f6fd0\",\r\n    \"complaint\": \"Não aguento mais essa chapa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/complaint/66e4501f84f33e0b24f83bf2",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"complaint",
+								"66e4501f84f33e0b24f83bf2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Teste",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "http://localhost:3003",
+			"type": "string"
+		},
+		{
+			"key": "prod",
+			"value": "",
+			"type": "string",
+			"disabled": true
+		},
+		{
+			"key": "local",
+			"value": "http://localhost:3003",
+			"type": "string",
+			"disabled": true
+		}
+	]
+}

@@ -37,7 +37,7 @@ class RealizationController {
     try {
       const realizarionExist = await RealizationRepository.findUnique({ person, job, date })
 
-      if (realizarionExist)
+      if (realizarionExist.length > 0)
         return res
           .status(404)
           .json({ message: 'Essa realização de serviço já foi informada.' })
@@ -64,12 +64,18 @@ class RealizationController {
     }
 
     try {
-      const realizarionExist = await RealizationRepository.findUnique({ person, job, date })
-
-      if (!realizarionExist)
+      const findById = await RealizationRepository.findById(id);
+      if (!findById)
         return res
           .status(404)
           .json({ message: 'Essa realização de serviço não foi encontrada.' })
+
+      const realizarionExist = await RealizationRepository.findUnique({ person, job, date })
+
+      if (realizarionExist.length > 0)
+        return res
+          .status(404)
+          .json({ message: 'Essa realização de serviço já foi informada.' })
 
     } catch (error) {
       console.log(error)
